@@ -34,6 +34,9 @@ namespace com.adjust.sdk {
         private static extern string _AdjustGetIdfa();
 
         [DllImport("__Internal")]
+        private static extern void _AdjustAppWillOpenUrl(string url);
+
+        [DllImport("__Internal")]
         private static extern void _AdjustSendFirstPackages();
 
         [DllImport("__Internal")]
@@ -104,6 +107,10 @@ namespace com.adjust.sdk {
 
         public void setOfflineMode(bool enabled) {
             _AdjustSetOfflineMode(AdjustUtils.ConvertBool(enabled));
+        }
+
+        public void appWillOpenUrl(string url) {
+            _AdjustAppWillOpenUrl(url);
         }
 
         public void sendFirstPackages() {

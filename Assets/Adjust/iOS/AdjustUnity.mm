@@ -347,6 +347,12 @@ extern "C"
         [Adjust setDeviceToken:[stringDeviceToken dataUsingEncoding:NSUTF8StringEncoding]];
     }
 
+    void _AdjustAppWillOpenUrl(const char* url) {
+        NSString *stringUrl = [NSString stringWithUTF8String:url];
+
+        [Adjust appWillOpenUrl:[NSURL URLWithString:stringUrl];
+    }
+
     char* _AdjustGetIdfa() {
         NSString *idfa = [Adjust idfa];
         const char* idfaCString = [idfa UTF8String];

@@ -11,6 +11,8 @@ namespace com.adjust.sdk {
 
         void setEnabled(bool enabled);
         void setOfflineMode(bool enabled);
+        
+        void appWillOpenUrl(string url);
         void setDeviceToken(string deviceToken);
 
         void start(AdjustConfig adjustConfig);

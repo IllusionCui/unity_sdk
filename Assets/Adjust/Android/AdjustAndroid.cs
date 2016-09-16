@@ -192,6 +192,13 @@ namespace com.adjust.sdk {
             ajcAdjust.CallStatic("setPushToken", deviceToken);
         }
 
+        public void appWillOpenUrl(string url) {
+            AndroidJavaClass ajcUri = new AndroidJavaClass("android.net.Uri");
+            AndroidJavaObject ajoUri = ajcUri.CallStatic<AndroidJavaObject>(url);
+
+            ajcAdjust.CallStatic("appWillOpenUrl", ajoUri);
+        }
+
         public static void addSessionPartnerParameter(string key, string value) {
             if (ajcAdjust == null) {
                 ajcAdjust = new AndroidJavaClass("com.adjust.sdk.Adjust");

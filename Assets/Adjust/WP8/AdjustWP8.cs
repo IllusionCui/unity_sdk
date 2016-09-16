@@ -65,6 +65,8 @@ namespace com.adjust.sdk {
 			);
 		}
 
+		public void appWillOpenUrl() {}
+
 		public void sendFirstPackages() {}
 
 		public void setDeviceToken(string deviceToken) {}

@@ -159,6 +159,15 @@ namespace com.adjust.sdk {
             Adjust.instance.setOfflineMode(enabled);
         }
 
+        public static void appWillOpenUrl(string url) {
+            if (Adjust.instance == null) {
+                Debug.Log(Adjust.errorMessage);
+                return;
+            }
+
+            Adjust.instance.appWillOpenUrl(url);
+        }
+
         public static void sendFirstPackages() {
             if (Adjust.instance == null) {
                 Debug.Log(Adjust.errorMessage);
