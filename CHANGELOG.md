@@ -1,7 +1,9 @@
-### Version 4.10.1 (XXth October 2016)
+### Version 4.10.1 (13th October 2016)
 #### Changed
 - Updated Native iOS SDK to version **4.10.2**.
 - Updated Native Android SDK to version **4.10.2**.
+
+---
 
 ### Version 4.10.0 (15th September 2016)
 #### Added
